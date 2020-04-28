@@ -1,0 +1,65 @@
+$first_background_color: #481380;
+$second_background_color: #7f78d2;
+$third_background_color: #efb1ff;
+$fourth_background_color: #ffe2ff;
+
+%background-color-all {
+    background-color: #f4eeff;
+}
+
+@media screen and (max-width: 768px) {
+    #about-info-large {
+        display: none;
+    }
+    #about-info-small {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 769px) {
+    #about-info-large {
+        display: flex;
+    }
+    #about-info-small {
+        display: none;
+    }
+}
+
+.first {
+    @extend %background-color-all;
+}
+
+.third {
+    background-color: $fourth_background_color;
+}
+
+.fourth {
+    background-color: $fourth_background_color;
+}
+.table-container{
+    overflow: auto;
+}
+.picture-group{
+    img{
+        width: 300px;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-btn {
+    background-color: $third_background_color;
+}
+
+#about-info {
+    p {
+        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 18px;
+    }
+    ul > li {
+        font-size: 18px;
+    }
+}
